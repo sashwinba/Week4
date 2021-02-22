@@ -1,0 +1,31 @@
+{   
+    "cardNetworkConfigs" : {
+        "amex": "https://ciphertest.amex-cipher.gw.zetapay.in//amexcipher/vereq",
+        "visa": "https://ciphertest.visa-cipher.gw.zetapay.in//visacipher/vereq",
+        "mastercard": "https://ciphertest.mastercard-cipher.gw.zetapay.in//mastercardcipher/vereq",
+        "rupay": "https://ciphertest.rupay-cipher.gw.zetapay.in//rupaycipher/vereq",
+        "maestro": "https://ciphertest.maestro-cipher.gw.zetapay.in//maestrocipher/vereq"
+    },
+    "cardNetworkLogos" : {
+        "amex": {
+            "logoURL": "https://s3-ap-southeast-1.amazonaws.com/cipher.zeta/card-network-logos/amex-white.png",
+            "logoBgColor": "rgb(0, 38, 99)"
+        },
+        "visa": {
+            "logoURL": "https://s3-ap-southeast-1.amazonaws.com/cipher.zeta/card-network-logos/visa-white.png",
+            "logoBgColor": "rgb(21, 25, 90)"
+        },
+        "mastercard": {
+            "logoURL": "https://s3-ap-southeast-1.amazonaws.com/cipher.zeta/card-network-logos/maastercard%403x.png",
+            "logoBgColor": "rgb(0, 0, 0)"
+        },
+        "rupay": {
+            "logoURL": "https://s3-ap-southeast-1.amazonaws.com/cipher.zeta/card-network-logos/rupay-white.png",
+            "logoBgColor": "rgb(67, 66, 68)"
+        },
+        "maestro": {
+            "logoURL": "https://s3-ap-southeast-1.amazonaws.com/cipher.zeta/card-network-logos/maestro%403x.png",
+            "logoBgColor": "rgb(35, 31, 32)"
+        }
+    }
+}

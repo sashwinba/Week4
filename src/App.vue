@@ -1,12 +1,30 @@
 <template>
   <div id="app">
-    <div id="nav">
-      <router-link to="/">Home</router-link> |
-      <router-link to="/about">About</router-link>
-    </div>
-    <router-view/>
+    <header>
+      <router-link
+        :to="{
+          name: 'Home',
+        }"
+        tag="h1"
+      >
+        <a>Zeta</a>
+      </router-link>
+      <h2>Cipher - Authentication Center</h2>
+    </header>
+    <router-view />
   </div>
 </template>
+
+<script lang="ts">
+import Vue from "vue";
+import { productList } from "@/utils";
+export default Vue.extend({
+  name: "app",
+  created() {
+    productList.initialise();
+  },
+});
+</script>
 
 <style>
 #app {
@@ -17,16 +35,28 @@
   color: #2c3e50;
 }
 
-#nav {
-  padding: 30px;
+html {
+  background-color: gainsboro;
 }
 
-#nav a {
-  font-weight: bold;
-  color: #2c3e50;
+header {
+  top: 0;
+  left: 0;
+  position: fixed;
+  padding-left: 3%;
+  width: 100%;
+  height: 70px;
+  background: #ffbd33;
+  display: flex;
+  justify-content: flex-start;
+  align-items: center;
+  z-index: 2;
+  color: white;
 }
 
-#nav a.router-link-exact-active {
-  color: #42b983;
+header h1,
+header h2 {
+  margin: 10px;
 }
 </style>
+
