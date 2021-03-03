@@ -25,7 +25,9 @@
           <h2>{{ getName() }}</h2>
           <p>{{ getDescription() }}</p>
         </div>
-        <button @click="editProduct">Edit Product</button>
+        <button @click="editProduct">
+          <span class="pencil">&#9998;</span> Edit Product
+        </button>
       </div>
 
       <div class="content" v-else-if="type === 'editing'">
@@ -86,10 +88,12 @@ export default Vue.extend({
 
 <style scoped>
 .top {
-  background-color: #34568b;
+  background-color: #2626c0;
   margin: 1% 0;
   padding: 1px;
   color: white;
+  border-top-left-radius: 10px;
+  border-top-right-radius: 10px;
 }
 
 .link:hover {
@@ -115,16 +119,18 @@ p {
 
 button {
   cursor: pointer;
-  border: 1px solid black;
+  border: 1px solid rgb(255, 255, 255);
+  background-color: #2626c0;
+  color: white;
   text-align: center;
   font-size: 18px;
   border-radius: 5px;
-  padding: 15px 30px;
+  padding: 10px 10px;
   margin: 2px 10px;
 }
 
 button:hover {
-  transform: scale(1.1);
+  transform: scale(1.05);
   text-decoration: underline;
 }
 
@@ -135,5 +141,9 @@ button:hover {
 .fade-enter,
 .fade-leave-to {
   opacity: 0;
+}
+
+.pencil {
+  font-size: 30px;
 }
 </style>

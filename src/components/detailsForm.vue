@@ -144,8 +144,8 @@ export default Vue.extend({
   methods: {
     getVersion,
     submit() {
-      if (this.product.name === "") {
-        alert("Product Name Required");
+      if (this.product.name === "" || this.product.bin === "") {
+        alert("Mandatory Fields Required");
       } else {
         this.$emit("modifiedProduct", this.product);
       }
@@ -161,19 +161,26 @@ export default Vue.extend({
 .detailsForm {
   font-family: "Ubuntu", sans-serif;
   text-align: left;
-  border: 2px solid #34568b;
+  border: 1px solid #2626c0;
   border-radius: 10px;
   margin: 0% auto;
   width: 80%;
 }
 
+.horizontalRule {
+  border: 0.1px solid #01010c;
+}
 h1,
 h3 {
   margin: 1%;
 }
 
+h3 {
+  color: #01010c5d;
+}
+
 form {
-  padding-left: 2%;
+  padding-left: 3px;
 }
 
 fieldset {
@@ -184,7 +191,7 @@ fieldset {
 }
 
 label {
-  padding: 2%;
+  padding: 2% 0%;
   font-size: 24px;
   width: 15%;
 }
@@ -193,9 +200,9 @@ input,
 textarea {
   width: 40%;
   font-size: 20px;
-  border: 1px solid;
+  border: 0.1px solid;
   padding: 5px;
-  border-radius: 6px;
+  /* border-radius: 6px; */
 }
 
 select {
@@ -248,7 +255,7 @@ button {
 }
 
 .submit {
-  background-color: #1e63eb;
+  background-color: #2626c0;
   color: white;
 }
 

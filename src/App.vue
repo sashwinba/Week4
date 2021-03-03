@@ -46,17 +46,29 @@ header {
   padding-left: 3%;
   width: 100%;
   height: 70px;
-  background: #ffbd33;
+  background: #0d0d0d;
   display: flex;
   justify-content: flex-start;
   align-items: center;
   z-index: 2;
-  color: white;
+}
+
+header a {
+  color: #f2f2f2;
+  text-decoration: none;
+}
+
+header a:hover {
+  text-decoration: underline;
 }
 
 header h1,
 header h2 {
   margin: 10px;
+}
+
+header h2 {
+  color: #999999;
 }
 </style>
 

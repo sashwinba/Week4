@@ -55,5 +55,6 @@ export default Vue.extend({
   margin-top: 80px;
   width: 100%;
   background-color: white;
+  border-radius: 10px;
 }
 </style>

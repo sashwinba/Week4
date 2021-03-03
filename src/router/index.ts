@@ -8,7 +8,13 @@ Vue.use(VueRouter)
 
 const routes: Array<RouteConfig> = [
   {
-    path: '/',
+    path: '/addProduct',
+    name: 'AddProduct',
+    component: addProduct
+  },
+  {
+    path: '/:productId?',
+    props: true,
     name: 'Home',
     component: Home
   },
@@ -17,11 +23,6 @@ const routes: Array<RouteConfig> = [
     name: 'ProductDetails',
     props: true,
     component: Product
-  },
-  {
-    path: '/addProduct',
-    name: 'AddProduct',
-    component: addProduct
   },
   {
     path: '/products/:productId/editProduct',

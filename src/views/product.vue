@@ -2,7 +2,7 @@
   <div class="product">
     <topBar type="edit" :id="id" @edit="editProduct" />
     <div class="text">
-      <h2>Basic Information</h2>
+      <h3>Basic Information</h3>
       <table class="infoTable">
         <tr>
           <td>Product Name:</td>
@@ -111,6 +111,7 @@ export default Vue.extend({
   margin-top: 80px;
   width: 100%;
   background-color: white;
+  border-radius: 10px;
 }
 
 .logo {
@@ -118,16 +119,29 @@ export default Vue.extend({
   margin-right: 20px;
 }
 .text {
-  margin-left: 5%;
+  margin-left: 2%;
   text-align: left;
 }
 .infoTable {
   width: 100%;
 }
 
+.text h3 {
+  color: #2626c0;
+  margin: 0;
+  font-size: xx-large;
+}
 .cardNetwork {
   display: flex;
   flex-direction: row;
   align-items: center;
+}
+
+td:nth-child(odd) {
+  color: rgba(0, 0, 0, 0.6);
+}
+
+td {
+  padding: 10px;
 }
 </style>

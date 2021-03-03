@@ -23,6 +23,9 @@ class ProductList {
         return this.productArray;
     }
 
+    getLength() {
+        return this.productArray.length;
+    }
     getProduct(idx = 1) {
         if (idx === null) {
             return this.productArray[0];
@@ -40,10 +43,8 @@ class ProductList {
     }
 
     addItem(product: productTemplate) {
-        product.id = "00000" + (this.productArray.length + 1).toString();
-        product.id = product.id.substr(product.id.length - 5);
-        product.id = "PRO" + product.id;
-
+        const id = this.productArray.length + 1;
+        product.id = "PRO" + id.toString().padStart(5, "0");
         this.productArray.push(product);
         this.jsonData = JSON.stringify(this.productArray);
         localStorage.setItem('productList', this.jsonData);
